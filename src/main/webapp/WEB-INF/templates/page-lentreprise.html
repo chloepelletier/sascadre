@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cadre - L'entreprise </title>
+<meta charset="UTF-8"/>
+
+
+<!-- CSS
+================================================== -->
+<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/bootstrapSite.css">
+<link rel="stylesheet" href="css/bootstrap-responsiveSite.css">
+<link rel="stylesheet" href="css/flexslider.css" />
+<link rel="stylesheet" href="css/custom-styleS.css">
+
+<!-- Favicons
+================================================== -->
+<link rel="shortcut icon" href="img/favicon.png.ico">
+
+<!-- JS
+================================================== -->
+<script src="js/entreprise.js"></script>
+<script src="js/jquery-1.8.3.js"></script>
+<script src="js/bootstrapSite.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/jquery.custom.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript">
+     $(window).load(function(){
+
+    $('.flexslider').flexslider({
+        animation: "slide",
+        slideshow: true,
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+    });
+});
+</script>
+
+</head>
+
+<body>
+	<!-- Bandeaux -->
+	<div th:insert="~{commun :: bandeaux}"></div>
+
+    <div class="container main-container">
+    
+      <div class="row header">
+      <div class="span5 logo" id="slogan" th:insert="~{commun :: logo}"></div>
+      <div th:insert="~{commun :: header(entreprise)}">
+      </div>
+      </div>
+
+    <!-- Page Content
+    ================================================== -->
+
+    <!-- Title Header -->
+    <div class="row">
+        <div class="span12">
+            <h2>Historique</h2>
+
+
+            <!-- Carousel
+            ================================================== -->
+            <div class="row">
+                <div class="span6">
+                    <div class="flexslider">
+                      <ul class="slides">
+                        <li><img src="img/gallerie_entreprise/entreprise2.JPG" alt="slider" /></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="span6" >
+
+                        <p class="historique" id="histo1"></p>
+                        <p class="historique" id="histo2"></p>
+                        <p class="historique" id="histo3"></p>
+                        <p class="historique" id="histo4"></p>
+
+
+                </div>
+
+            </div>
+
+            <h2>Cadre et EDF</h2>
+            <div class="row">
+            <div class="span12">
+            <p class="edf" id="edf"> </p>
+           </div>
+
+            </div>
+
+           <h2>Nos equipes</h2>
+            <div class="row">
+                <div class="span6">
+                    <img src="img/gallerie_entreprise/penly2.png" alt="image">
+                    <h5>Penly</h5>
+                    
+                </div>
+
+                <div class="span6">
+                    <img src="img/gallerie_entreprise/paluel.png" alt="image">
+                    <h5>Paluel</h5>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Title Header -->
+
+    <div id="disparition">
+    <h2>Ils nous font confiance </h2>
+    <div class="row">
+
+        <div class="span2">
+
+            <div class="flexslider">
+                <ul class="slides">
+                    <li ><img src="img/gallerie_client/spie.png" alt="slider" /></li>
+                    <li><img src="img/gallerie_client/sade.png" alt="slider" /></li>
+                </ul>
+            </div>
+        </div>
+        <div class="span2">
+            <div class="flexslider">
+                <ul class="slides">
+                    <li><img src="img/gallerie_client/edf.png" alt="slider" /></li>
+                    <li><img src="img/gallerie_client/ponticelli.png" alt="slider" /></li>
+                </ul>
+            </div>
+        </div>
+         <div class="span2">
+            <div class="flexslider">
+                <ul class="slides">
+                    <li><img src="img/gallerie_client/neom.png" alt="slider" /></li>
+                    <li><img src="img/gallerie_client/sfee.png" alt="slider" /></li>
+                    <li><img src="img/gallerie_client/nordon.png" alt="slider" /></li>
+                </ul>
+            </div>
+        </div>
+         <div class="span2">
+            <div class="flexslider">
+                <ul class="slides">
+                    <li><img src="img/gallerie_client/omexom.png" alt="slider" /></li>
+                    <li><img src="img/gallerie_client/prezioso.png" alt="slider" /></li>
+                    <li><img src="img/gallerie_client/endel.png" alt="slider" /></li>
+                </ul>
+            </div>
+        </div>
+         <div class="span2">
+            <div class="flexslider">
+                <ul class="slides">
+                    <li><img src="img/gallerie_client/orys.png" alt="slider" /></li>
+                    <li><img src="img/gallerie_client/bouygues.png" alt="slider" /></li>
+                </ul>
+            </div>
+        </div>
+         <div class="span2">
+            <div class="flexslider">
+                <ul class="slides">
+                    <li><img src="img/gallerie_client/engie.png" alt="slider" /></li>
+                    <li><img src="img/gallerie_client/eiffage.png" alt="slider" /></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    </div>
+     <div class="row">
+        <div class="span12">
+            <h2>Nos Engagements</h2>
+            <p class="lead">Nos engagements premiers envers tous nos clients sont la qualite et la disponibilite. Chacun des produits et des services fourni aux clients repond aux exigences de ce dernier et aux normes, codes et reglements applicables.</p>
+        </div>
+    </div>
+    <div class="row clearfix">
+        <ul class="gallery-post-grid holder">
+
+            <li class="span2">
+                <h3 ><br/>Nos <br/> valeurs </h3>
+            </li>
+
+                    <!-- Gallery Item 1 -->
+            <li  class="span2" >
+                <img src="img/gallerie_valeurs/satisfaction.png" alt="Gallery" class="img-circle">
+            </li>
+
+                    <!-- Gallery Item 2 -->
+            <li class="span2" >
+                <img src="img/gallerie_valeurs/disponibilite.png" alt="Gallery" class="img-circle">
+            </li>
+
+                    <!-- Gallery Item 3 -->
+            <li class="span2" >
+                <img src="img/gallerie_valeurs/confiance.png" alt="Gallery" class="img-circle">
+            </li>
+
+                    <!-- Gallery Item 4 -->
+            <li class="span2" >
+                <img src="img/gallerie_valeurs/amelioration.png" alt="Gallery" class="img-circle">
+            </li>
+
+                    <!-- Gallery Item 5 -->
+            <li class="span2" >
+                <img src="img/gallerie_valeurs/qualite.png" alt="Gallery" class="img-circle">
+            </li>
+
+        </ul>
+    </div>
+
+
+
+</div> <!-- End Container -->
+
+  <!-- Footer-->
+
+	<div class="footer-container" th:insert="~{commun :: footer}"><!-- Begin Footer -->
+    </div>
+
+
+    <!-- Scroll to Top -->
+    <div id="toTop" class="hidden-phone hidden-tablet">Back to Top</div>
+
+</body>
+</html>

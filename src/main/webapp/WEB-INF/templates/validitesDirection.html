@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Page ou l'on peut voir les différentes ressources de l'entreprise">
+    <meta name="author" content="maxime SURMONT">
+    <title> Validites des employes </title>
+    <link rel="shortcut icon" href="img/favicon.png.ico" type="image/x-icon" />
+
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/pagesIntranet.css" rel="stylesheet">
+    <link href="../css/validitesDirection.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/pagesIntranet.js"></script>
+    <script type="text/javascript" src="../js/validitesDirec.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div>
+        <a><span class="disparaitre" id="iconeMenu"></span></a>
+        <div class="row">
+        
+         <div th:insert="~{communIntranet :: divNavigationIntranet}">
+          </div>
+          
+          <section class="col-lg-8 col-md-8 col-sm-8 col-xs-8" id="section">
+            <h1 id="titre" >Validites des employes</h1>
+
+            <p>Rechercher un employe :</p>
+            <form id="formulaire1">
+                <div class="input-group">
+                  <div class="input-group-addon" > <span class="glyphicon glyphicon-search" > </span> </div>
+                  <input type="text" list="lstEmployes" class="form-control inputSearch" id="nomR" placeholder="identifant de la personne recherchee">
+                	<datalist id="lstEmployes"></datalist>
+                </div>
+                <div>
+                  <a class="btn btn-primary boutonSearch" id="boutonSearch1" href="#">Rechercher</a>
+                </div>
+            </form>
+            <div id="tableauDesValidites1">
+           </div>
+
+            <p>Rechercher un type de validite :</p>
+            <form id="formulaire2">
+                <div class="input-group">
+                  <div class="input-group-addon" > <span class="glyphicon glyphicon-search" > </span> </div>
+                  <input type="text" list="lstTypes" class="form-control inputSearch" id="typeR" placeholder="nom de la validite recherchee">
+               		<datalist id="lstTypes"></datalist>
+                </div>
+                <div>
+                  <a class="btn btn-primary boutonSearch" id="boutonSearch2" href="#">Rechercher</a>
+                </div>
+            </form>
+            <div id="tableauDesValidites2">
+            </div>
+
+            <p>Ajouter une validite :</p>
+            <form id="formulaire3">
+              <div class="row">
+                <div class="input-group col-lg-5 col-md-5 col-sm- col-xs-5">
+                  <div class="input-group-addon descriptionAjout" > <span> Nom : </span> </div>
+                  <input  id="inputNom" type="text" class="form-control">
+                </div>
+                <div class="input-group col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                  <div class="input-group-addon descriptionAjout" > <span > Prenom : </span> </div>
+                  <input id="inputPrenom" type="text" class="form-control">
+                </div>
+              </div>
+
+              <div>
+                <span> Date de Debut : </span>
+                <select id="JoursD"></select>
+                <select id="MoisD"></select>
+                <select name="AnneesD" id="AnneesD"></select>
+              </div>
+
+
+              <div>
+                <span> Date de Fin : </span>
+                <select id="JoursF"></select>
+                <select id="MoisF"></select>
+                <select id="AnneesF"></select>
+              </div>
+
+			  <span> Type de validite :</span>
+              <select id="type">
+                <option value="-">-</option>
+              </select>
+
+              <div>
+                <a class="btn btn-primary boutonSearch" id="boutonAdd" href="#">Ajouter</a>
+              </div>
+            </form>
+          </section>
+
+        </div>
+      </div>
+		<div id="idtypeV" style="display:none">
+		</div>
+      <footer th:insert="~{communIntranet :: footerIntranetDirection}" id="footer">
+      </footer>
+      
+    </div>
+  </body>
+</html>
